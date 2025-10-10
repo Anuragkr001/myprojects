@@ -6,7 +6,7 @@
 }
 .container{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     overflow-x: none;
     background-color: #e2e2e2;
 background: linear-gradient(98deg, #e2e5e2 0%, #ffffff 100%);
@@ -84,12 +84,16 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
-.rightbox img{
-     height: 400px;
-     width: 400px;
-     border-radius: 20px;
-     transition: all 0.6s linear 0s;
+.rightbox img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover; /* keeps image ratio clean */
+  transition: all 0.6s linear 0s;
 }
+
 .leftbox{
     display: flex;
     flex-direction: column;
@@ -133,4 +137,98 @@ nav{
 .rightbox .overlay span{
     color: white;
     font-size: 1.2rem;
+}
+/* 🌐 RESPONSIVE DESIGN FIXES */
+
+/* For tablets and small laptops */
+@media (max-width: 1024px) {
+    .contentbox {
+        width: 70%;
+        padding: 2rem;
+        gap: 60px;
+    }
+
+    #navlist {
+        flex-direction: column;
+        font-size: 2rem;
+        gap: 10px;
+    }
+
+    #navitem {
+        gap: 25px;
+    }
+
+    .rightbox img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .contentbox {
+        width: 90%;
+        padding: 1.5rem;
+        gap: 40px;
+    }
+
+    .item {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .rightbox img {
+        height: 250px;
+        width: 250px;
+    }
+
+    #navlist {
+        flex-direction: column;
+        font-size: 1.8rem;
+        gap: 10px;
+    }
+
+    #navlogo {
+        font-size: 2.2rem;
+    }
+
+    #navitem {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footerbox p {
+        font-size: 1.3rem;
+    }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+    .contentbox {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .rightbox img {
+        height: 200px;
+        width: 200px;
+    }
+
+    #navlogo {
+        font-size: 1.8rem;
+    }
+
+    #navitem a {
+        font-size: 1rem;
+    }
+
+    .leftbox h2 {
+        font-size: 1.5rem;
+    }
+
+    .ingbox,
+    .recipebox {
+        font-size: 1rem;
+    }
 }

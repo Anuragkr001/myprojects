@@ -6,82 +6,166 @@
     <title>third card</title>
 </head>
 <style>
-       *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-         .container{
-            width: 100vw;
-            height: 100vh;
-            background-color: #88C6EC;
-            background-image: linear-gradient(135deg,#88c6ec,#9599e2 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .card{
-             width: 70vw;
-            height: 400px;
-            background-color: rgb(84, 7, 105);
-             display: flex;
-            flex-direction: row;
-             align-items: stretch;
-            gap: 0px; 
-            overflow: hidden;
-   
-        }
-        .rightbox{
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            width: 75%;
-             background-color: rgb(84, 7, 105);
-             padding: 60px;
-        }
-        .rightbox h1{
-            text-align: center;
-            color: white;
-         
-        }
-        .rightbox p{
-            text-align: center;
-            color: white;
-            padding: 10px;
-            
-        }
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        #leftbox img{
-            height: 400px;
-            width: 480px;
-        }
-        .lastline{
-            display: flex;
-            flex-direction: row;
-            align-items: left;
-             gap: 70px;
-            width: 100%;
-        }
-        #firstsection h4{
-            padding: 0;
-            width: 100%;
-            gap: 0;
-            color: white;
-        }
-         #secondsection h4{
-            padding: 0;
-            width: 100%;
-            gap: 0;
-            color: white;
-        }
-        #thirdsection h4{
-            padding: 0;
-            width: 100%;
-            gap: 0;
-            color: white;
-        }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #88c6ec, #9599e2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      width: 70vw;
+      max-width: 1000px;
+      background-color: rgb(84, 7, 105);
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
+    }
+
+    #leftbox img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    #leftbox {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .rightbox {
+      flex: 1;
+      background-color: rgb(84, 7, 105);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .rightbox h1 {
+      font-size: 2rem;
+    }
+
+    .rightbox p {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 500px;
+    }
+
+    .lastline {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .lastline div h1 {
+      font-size: 1.8rem;
+    }
+
+    .lastline div h4 {
+      font-size: 0.9rem;
+      color: #ddd;
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        width: 90vw;
+      }
+
+      .rightbox {
+        padding: 40px;
+      }
+
+      .rightbox h1 {
+        font-size: 1.8rem;
+      }
+
+      .rightbox p {
+        font-size: 0.95rem;
+      }
+
+      .lastline div h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Mobile View */
+    @media (max-width: 600px) {
+      .container {
+        height: auto;
+        padding: 40px 10px;
+      }
+
+      .card {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+      }
+
+      #leftbox img {
+        width: 100%;
+        height: 250px;
+      }
+
+      .rightbox {
+        padding: 25px 20px;
+        gap: 10px;
+      }
+
+      .rightbox h1 {
+        font-size: 1.5rem;
+      }
+
+      .rightbox p {
+        font-size: 0.9rem;
+      }
+
+      .lastline {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .lastline div h1 {
+        font-size: 1.3rem;
+      }
+
+      .lastline div h4 {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .rightbox h1 {
+        font-size: 1.3rem;
+      }
+
+      .rightbox p {
+        font-size: 0.85rem;
+      }
+
+      .lastline div h1 {
+        font-size: 1.1rem;
+      }
+    }
 </style>
 <body>
     <div class="container">
